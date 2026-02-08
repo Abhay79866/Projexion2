@@ -1,7 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 
-// Initialize GoogleGenAI using process.env.API_KEY directly as required by guidelines.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Initialize GoogleGenAI using process.env.API_KEY || 'FAKE_API_KEY_FOR_DEVELOPMENT' directly as required by guidelines.
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || 'FAKE_API_KEY_FOR_DEVELOPMENT' });
 
 export const getConversionAudit = async (url: string, businessType: string) => {
   try {
